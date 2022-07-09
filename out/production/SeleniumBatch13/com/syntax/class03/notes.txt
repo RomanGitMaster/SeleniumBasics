@@ -1,0 +1,75 @@
+Why do we need Xpath and CSS Selector?
+- developers may not provide all the locators in html
+- by using xpath and css we can identify elements with any given attributes
+
+What is a Xpath?
+- xpath is like a query language which helps to identify
+
+Types of Xpath:
+Absolute Xpath--> starting from the starting node of the html( when you are starting from html tag it is considered very beginning);
+                  it always starts with single slash(/)
+                  Ctrl+F - search bar for webElements
+                  e.g /html/body/div/div/div
+
+Relative Xpath--> it will start from any node in html;
+                  it will always start with double slash (//)
+                  we can use any attribute using xpath
+----------------------------------------------------------------------------------------------------------------------
+Syntax for Relative Xpath:(need "@" like with attributes that have values)
+//tagname[@attribute= 'attribute value']---> at the end of search box it will show how many of them we have, if it's unique or not
+for example --> 1of1  a[@class,'list_group_item']
+IF its UNIQUE - we use it to locate our WebElement
+
+e.g ( at facebook.com page)
+//input[@id='email']( at facebook.com page)
+
+!Alwyas FIRST look for id, if can't find it, go  for Xpath
+
+Identifying elements by its TEXT:( so it doesn't need "@" like with attributes that have values)
+//tagname[text() ='text value']
+e.g. ( facebook.com page)
+//a[text()='Create new account']
+
+Identifying Elements by using contains method:
+//tagname[contains(@attribute,'partil attribute value')]
+e.g.
+//input[contains(@placeholder,'Email')]
+e.g.
+//h2[contains(text(), 'the world')]
+
+starts-with will identify elements by its partial starting value
+//tagname[starts-with(@attribute,'partial staring attribute value')]
+e.g.
+//input[starts-with(@aria-label,'Email')]
+-------------------------------------------------------------------------------------------------------------
+
+Advanced Xpath:
+***if we have in html a "body" and it's indented to the side it means that it belongs to something(html in our case)***
+- is based on parent and child , sibling relationship
+
+Identifying element by following sibling:
+(first we're identifying element we need and then go up (sibling element must be on the same level)
+//tagname[@attribute='attribute value']/following-sibling::siblingTagname
+
+e.g.(from Syntaxtechs.net page)
+//input[@id='calFromDate']/following-sibling::img--> in our case we  used advanced xpath and sibling because it was
+ duplicated, but sibling that was next to our xpath was different.
+
+ //label[@for ='leaveList_calFromDate']/following-sibling::img
+ The sibling doesn't have to be next to ours , its just
+ have to be on the same level
+
+Identifying element by preceding sibling
+//tagname[@attribute = 'attribute value']/preceding-sibling::siblingTagname
+e.g. //span[text()='& Orders']/preceding-sibling::span
+
+identifying elements by its parent:
+//tagname[@attribute = 'attribute value']/parent::parentTagname
+//span[text() = '& Orders']/parent::a
+
+identifying elements by its ancestors:
+//input[@id = 'email']/ancestor::form
+
+identifying elements by its index
+(//img[@class = 'ui-datepicker-trigger'])[2]
+

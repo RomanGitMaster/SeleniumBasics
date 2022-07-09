@@ -1,0 +1,34 @@
+Selenium Class 01
+
+What is software testing?
+-  Identify correctness and quality of the application we are working on
+
+How many ways we can actually test?
+-  Manual Testing
+-  Automation Testing
+
+When do we go for automation testing?
+- after manual testing is passed
+- when environment is stable
+- analyze out test suite and choose our automation tools
+
+What automation tools do we know about?
+- Selenium, Cucumber,TestNG,JUnit, Katalon Studio,UFT/QTP
+
+Levels of testing:
+- Unit testing--devs
+- Integration testing--testers
+- Acceptance testing --clients ( or sometimes us, testers)
+- System testing-- mostly done by development operations( devOps)
+
+Types of Testing:
+- Functional testing (tested by us - testers):
+smoke, regression, sanity
+
+- Non-Functional testing:
+Performance testing ------>load or stress performance of the application in sever load( tested by Performance tester)
+Security testing ----> how easy is your application to hack( tested by Cybersecurity team)
+
+=======================================================================================================================
+
+

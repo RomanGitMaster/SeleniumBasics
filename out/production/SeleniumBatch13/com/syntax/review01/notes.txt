@@ -1,0 +1,12 @@
+Example of html page structure
+
+<html>
+ <head>
+     <title>myLogin</title>
+ </head>
+ <body>
+     <input id="userName">
+     <input name=""password>
+     <button>login</button>
+ </body>
+</html>

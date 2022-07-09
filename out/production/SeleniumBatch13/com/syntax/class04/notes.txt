@@ -1,0 +1,62 @@
+CSS Selector (Cascading Style sheet) - it is  another way of locating elements on the web page.
+
+Syntax:
+tagname[attribute = 'attribute value']
+e.g. input[value='LOGIN']
+
+!CSS does not give us an opportunity to locate the elements by its text!
+SHORTCUTS FOR CSS:
+Shortcut for the className-->"."// ONLY WORKS IF THERE IS A CLASS ATTRIBUTE
+SYNTAX: tagname.classnameValue// no square brackets , simple as that
+-----------------------------------------------------------------------------
+Shortcut for id----> "#"     input#textUsername
+SYNTAX:tagname#idValue
+       input#txtPassword
+-----------------------------------------------------------------------------
+
+
+METHODS IN CSS:
+---------------------------------
+contains() method in CSS:
+* symbol represents contains method
+tagname[attribute *= 'partial attribute value']
+input[placeholder *= 'phone']
+------------------------
+start-with method in CSS:
+^(Circumflex) symbol represents starts with method
+tagname[attribute ^= 'starting attribute value']
+input[aria-label^='Pass']
+---------------------------------------------------------------------------------
+
+!WE USE ANY LOCATOR AS LONG WE IDENTIFY ELEMENT UNIQUELY ON A WEBPAGE!
+
+ends-with method in CSS:
+$ symbol represents ends-with method in CSS
+tagname[attribute $ ='value']
+a[href $='login']
+
+
+XPATH vs CSS :
+
+-CSS cannot locate elements by text whereas xpath can
+-CSS has shortcuts
+-CSS is faster than xpath in locating element
+-CSS is more readable and simple than xpath( simpler syntax)
+-xpath does not have ends-with method
+
+**************************************************************
+WebElements COMMANDS:
+consists of several methods where we can perform an action and get the element state on the webpage
+
+isEnabled()--->boolean
+isDisplayed()--->boolean
+isSelected()-->boolean
+clear()-->void method(returns nothing)
+getText()---> String value
+getAttribute()--->String value
+submit()--->void method(returns nothing)
+
+
+
+
+
