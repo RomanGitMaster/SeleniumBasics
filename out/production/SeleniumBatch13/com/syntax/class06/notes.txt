@@ -1,0 +1,70 @@
+----------------------------------------ALERTS--------------------------------------------------------------------------
+Alert is a pop-up message.
+Alerts take a complete focus of our main page that we are on.
+We cannot proceed further until it is handled
+
+2 Types of Alerts:
+
+1) Web Based Alerts/HTML Alerts/JavaScript Alert/ Browser Alert - we can simply inspect and perform action
+ - we can handle these alerts by using .switchTo() method, we cannot inspect
+2) Windows based Alerts - we cannot handle with Selenium( not Windows OS, it is window-window)
+
+Types of JavaScript(Browser) Alerts:
+1) simple alert - we can just confirm( click on it)
+2) confirmation alert - either cancel or click ok
+3) promt alert - enter the text and then click ok or cancel
+
+FIRST WE MUST SWITCH to alert by using ALERT class and method switchTo():
+Alert alert=driver.switchTo().alert(); --> .switchTo() is a method that allows us to switch to new pop-up window with alert
+NOTICE: looks like we can create Alert class once and then just call object "alert" to perform action on multiple alerts
+
+To Handle JavaScript Alerts we have 4 methods:
+(Methods to work with Alert ( with pop-upped alert window , which is predefined Interface class in
+Selenium WebDriver)
+
+.accept() To accept the alert
+.dismiss() To dismiss the alert
+.getText() To get the text of the alert
+.sendKeys() To write some text to the alert
+
+
+-----------------------------------FRAMES-------------------------------------------------------------------------------
+***Frame/iFrame is nothing but another webElement in html page, which displays another part of webpage.
+
+Frame is a separate independent window in our webpage
+Frames allow devs to represent multiple views on one page
+
+3 Ways to interact or to switch to a frame:
+1) by id or name  --> driver.switchTo().frame(String name/id);
+2) by index       -->driver.switchTo().frame(0);// by index 0
+------------------------------------------------------------------------------------------------------------------------
+Sometimes when there are multiple Frames (Frame inside a frame), we need to first switch to the parent frame and then we
+need to switch to the child frame. In the below HTML, you can see we have frame2 inside frame1 and web elements inside the frame2.
+       //Switch to child frame
+        driver.switchTo().frame("frame1").switchTo().frame("frame2");
+        driver.findElement(By.id("input2")).sendKeys("Username");
+        driver.findElement(By.id("input1")).sendKeys("Password");
+
+driver.findElement(By.cssSelector("button[name='btnG']")).click();
+
+        //switch to parent frame
+        driver.switchTo().frame("frame1");
+------------------------------------------------------------------------------------------------------------------------
+3) by webElement  -->WebElement iframeElement = driver.findElement(By.id("IF1"));
+                     driver.switchTo().frame(iframeElement);
+
+
+ In alerts - switch to an alert manually and switch BACK AUTOMATICALLY
+ In frames - switch to frame manually and switch BACK to the main page MANUALLY( we use-->switchTo().defaultContent() )
+ EXAMPLE
+ WebElement iframeElement = driver.findElement(By.id("IF1"));
+   //now use the switch command
+ driver.switchTo().frame(0);
+  //Do all the required tasks in the frame 0
+ //Switch back to the main window
+ driver.switchTo().defaultContent();
+ driver.quit();
+
+ Interview question:
+ How do you handle alerts in Selenium?
+ -We handle by using Alert interface

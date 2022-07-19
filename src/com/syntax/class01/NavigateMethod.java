@@ -14,8 +14,8 @@ public class NavigateMethod {
         driver.navigate().forward();
         Thread.sleep(2000);// PAUSE refresh of the page for 2000milliseconds=2 sec(learn seconds scale system!)
         driver.navigate().refresh();
-        //driver.quit();// close only current Tab
-        driver.close();// closes the whole Browser
+        //driver.quit();// closes the whole Browser
+        driver.close();
 
 
 

@@ -1,6 +1,7 @@
 What is Selenium WebDriver?
 
-- It is opensource a set of tools(whole suit) which helps us to automate web application. It is mainly used to perform functional testing
+- It is opensource a set of tools(whole suit) which helps us to automate web application. It is mainly used to perform
+functional testing
 WebDriver is an Interface.
 
 Selenium Components:
@@ -20,11 +21,11 @@ Cons of Selenium WebDriver:
 - Cannot test desktop applications
 - No technical support
 - no built-in reports
-- cannot test images, videos and caprthas
+- cannot test images, videos and captchas
 
 get() vs navigate()
 - navigate() can go back, forward ,refresh if specific action was done( also through this method history is kept in browser)
-- get() will wait until your webpage will load and only then will go to next line of action, next method, when navigate() will not
+- get() will wait until your webpage will load and only then will go to next line of action of next method, when navigate() will not
 - get() will not keep the history of the browser whereas navigate() will
 
 close() vs quit()

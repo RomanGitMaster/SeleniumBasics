@@ -73,3 +73,7 @@ identifying elements by its ancestors:
 identifying elements by its index
 (//img[@class = 'ui-datepicker-trigger'])[2]
 
+
+
+//a[@class='primary-button w-inline-block']/preceding-sibling::h1
+//p[@class='paragraph']/following-sibling::a

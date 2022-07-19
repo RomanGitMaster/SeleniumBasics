@@ -1,0 +1,31 @@
+
+
+Handling check boxes and radiobuttons :
+- if you have only one checkbox one radiobutton - you can just click on it
+- if you have multiples choices - store them in a List and loop through
+
+ Dropdowns
+ Dropdown is a menu which gives us opportunity to select one or more options
+ Types of Dropdowns:
+ 1) Singles Select;
+ 2) Multiple Select;
+
+ Handling Dropdowns:
+ 1) click on dropdowns and click an option;
+ 2) using Select Class; ( in order to use Select Class we need to make sure our Dropdown has a Select tag)
+
+ Selecting option from dropdown in 3 ways:
+ 1. by index
+ 2. by visible text
+ 3. by value
+
+ Whenever you interact with multiple elements you store them inside
+ the container such as List, Set etc..
+
+ In order to deselect the option from dropdown
+ -- Make sure your DD is multiple select
+ deselectByValue()
+ deselectByIndex()
+ deselectByVisibleText()
+ deselectAll()
+

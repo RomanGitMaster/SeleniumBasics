@@ -17,7 +17,7 @@ object - every new line on html doc is considered to be an Object
 model - it is just a layout of the html
 
 Locator:
-is an adress or a position of a webElement on a webpage
+is an address or a position of a webElement on a webpage
 is used to locate or identify webElements on a webpage
 
 8 Locators:
@@ -41,7 +41,7 @@ selenium will only interact with the first element it locates
 
 if you look for location always look for ID ( it is always unique)
 
--Purple identification considered TagNames( come at the beginning and the end, anything in between are atributes or exact elements)
+-Purple identification considered TagNames( come at the beginning and the end, anything in between are attributes or exact elements)
 if you have an  "<a" tag it is anchor tag for  linktext
 
 If you have numeric value it is temporary, and it will be changed, its dynamic id, and we don't want that for  our coding
